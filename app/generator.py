@@ -7,18 +7,13 @@ class GeneratorError(Exception):
 
 
 def clean_function_name(path: str) -> str:
-    """
-    Convert API path into a valid Python function name
-    """
     name = path.strip("/")
 
-    # Replace invalid characters with underscore
+    # remove version prefix like data_2_5
+    name = re.sub(r"^data_\d+_\d+_", "", name)
+
     name = re.sub(r"[^a-zA-Z0-9_]", "_", name)
-
-    # Remove multiple underscores
     name = re.sub(r"_+", "_", name)
-
-    # Remove leading/trailing underscores
     name = name.strip("_")
 
     return name or "root"
