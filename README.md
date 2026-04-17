@@ -1,26 +1,56 @@
-# APIForge AI
+# 🚀 APIForge AI
 
-APIForge AI is a hackathon-ready full-stack developer tool that turns an API documentation URL into:
+### Smart DevTool for API Integration
 
-- Structured API metadata
-- A detected authentication strategy
-- A ready-to-use Python SDK
-- Example usage code
+APIForge AI is an AI-powered developer tool that converts any API documentation URL into:
 
-## Stack
+* ✅ Structured API metadata
+* 🔐 Authentication detection
+* 📡 Extracted endpoints with parameters
+* 🧠 AI-powered understanding of API structure
+* 🧾 Auto-generated Python SDK (ready to use)
 
-- Backend: FastAPI
-- Frontend: Streamlit
-- LLM: Groq `llama3-8b-8192`
-- Scraping: `requests` + `BeautifulSoup`
-- Package manager: `uv`
+---
 
-## Project Structure
+## 🎯 Problem
+
+Developers spend significant time:
+
+* Reading API documentation
+* Understanding endpoints and parameters
+* Writing boilerplate integration code
+
+👉 APIForge AI solves this in seconds.
+
+---
+
+## 💡 Solution
+
+Provide an API documentation URL → APIForge AI will:
+
+1. Scrape and clean the documentation
+2. Extract structured API data using LLM
+3. Detect authentication type
+4. Generate a usable Python SDK automatically
+
+---
+
+## 🧠 Tech Stack
+
+* **Backend:** FastAPI
+* **Frontend:** Streamlit
+* **LLM:** Groq (`llama-3.1-8b-instant`)
+* **Scraping:** `requests` + `BeautifulSoup`
+* **Parsing:** Regex + structured JSON normalization
+* **Package Manager:** `uv`
+
+---
+
+## 🏗️ Project Structure
 
 ```text
 apiforge-ai/
 ├── app/
-│   ├── __init__.py
 │   ├── main.py
 │   ├── scraper.py
 │   ├── parser.py
@@ -34,40 +64,59 @@ apiforge-ai/
 └── README.md
 ```
 
-## Setup
+---
 
-1. Install dependencies:
+## ⚙️ Setup
+
+### 1. Install dependencies
 
 ```bash
 uv add fastapi uvicorn streamlit beautifulsoup4 requests python-dotenv groq
 ```
 
-2. Add your Groq key in `.env`:
+---
+
+### 2. Configure environment variables
+
+Create a `.env` file:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
 BACKEND_URL=http://localhost:8000
+GROQ_MODEL=llama-3.1-8b-instant
 ```
 
-## Run
+---
 
-Backend:
+## ▶️ Run the Project
+
+### Backend
 
 ```bash
 uv run uvicorn app.main:app --reload
 ```
 
-Frontend:
+### Frontend
 
 ```bash
 uv run streamlit run frontend/app.py
 ```
 
-## API Endpoints
+---
+
+## 🧪 Sample Inputs
+
+* https://jsonplaceholder.typicode.com/
+* https://openweathermap.org/api
+* https://reqres.in/
+
+---
+
+## 🔌 API Endpoints
 
 ### `POST /process`
 
-Input:
+#### Input:
 
 ```json
 {
@@ -75,13 +124,13 @@ Input:
 }
 ```
 
-Output:
+#### Output:
 
 ```json
 {
   "api": {
     "base_url": "https://api.example.com",
-    "auth": "Bearer token",
+    "auth": "API Key",
     "endpoints": [
       {
         "path": "/users",
@@ -91,50 +140,58 @@ Output:
       }
     ]
   },
-  "summary": "Short API explanation."
+  "summary": "API successfully analyzed."
 }
 ```
 
+---
+
 ### `POST /generate`
 
-Input:
+#### Input:
 
 ```json
 {
   "base_url": "https://api.example.com",
-  "auth": "Bearer token",
-  "endpoints": [
-    {
-      "path": "/users",
-      "method": "GET",
-      "description": "List users",
-      "params": ["page", "limit"]
-    }
-  ]
+  "auth": "API Key",
+  "endpoints": []
 }
 ```
 
-Output:
+#### Output:
 
 ```json
 {
-  "sdk_code": "import requests\\n..."
+  "sdk_code": "import requests\n..."
 }
 ```
 
-## Notes
+---
 
-- Scraped content is cached in `data/` by URL hash to avoid reprocessing the same docs page.
-- The backend also memoizes processed URLs during runtime for faster repeated requests.
-- The Groq extraction prompt is constrained to strict JSON output with no prose.
-- The SDK generator creates an `APIClient` class using `requests`, auth helpers, endpoint methods, and example usage.
+## 🔥 Key Features
 
-## Error Handling
+* 🚀 One-click API understanding
+* 🧠 LLM-powered structured extraction
+* 🔐 Authentication detection
+* 📡 Hybrid parsing (LLM + fallback)
+* ⚡ Fast caching
+* 🧾 Auto-generated SDK
 
-The app surfaces clear messages for:
+---
 
-- Invalid or unreachable URLs
-- Missing `GROQ_API_KEY`
-- No API endpoints found
-- Invalid LLM JSON output
-- SDK generation failures
+## 🏆 Demo Flow
+
+1. Paste API URL
+2. Click **Analyze API**
+3. View extracted endpoints
+4. Click **Generate SDK**
+5. Use the generated code
+
+👉 That’s your WOW moment.
+
+---
+
+## 👨‍💻 Author
+
+Built for hackathon 🚀
+Designed for developers ❤️
