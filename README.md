@@ -12,6 +12,15 @@ APIForge AI is an AI-powered developer tool that converts any API documentation 
 
 ---
 
+## 🌐 Live Demo
+
+* **Frontend:** https://apiforge-ai.streamlit.app
+* **Backend:** https://apiforge-ai-1.onrender.com
+
+👉 Paste any API documentation URL and generate SDK instantly.
+
+---
+
 ## 🎯 Problem
 
 Developers spend significant time:
@@ -20,7 +29,7 @@ Developers spend significant time:
 * Understanding endpoints and parameters
 * Writing boilerplate integration code
 
-👉 APIForge AI solves this in seconds.
+👉 APIForge AI reduces this effort from **hours to seconds**.
 
 ---
 
@@ -41,14 +50,14 @@ Provide an API documentation URL → APIForge AI will:
 * **Frontend:** Streamlit
 * **LLM:** Groq (`llama-3.1-8b-instant`)
 * **Scraping:** `requests` + `BeautifulSoup`
-* **Parsing:** Regex + structured JSON normalization
-* **Package Manager:** `uv`
+* **Parsing:** Regex + structured normalization
+* **Package Manager:** uv
 
 ---
 
 ## 🏗️ Project Structure
 
-```text
+```
 apiforge-ai/
 ├── app/
 │   ├── main.py
@@ -99,7 +108,7 @@ uv run uvicorn app.main:app --reload
 ### Frontend
 
 ```bash
-uv run streamlit run frontend/app.py
+python -m streamlit run frontend/app.py
 ```
 
 ---
@@ -174,7 +183,7 @@ uv run streamlit run frontend/app.py
 * 🧠 LLM-powered structured extraction
 * 🔐 Authentication detection
 * 📡 Hybrid parsing (LLM + fallback)
-* ⚡ Fast caching
+* ⚡ Fast processing
 * 🧾 Auto-generated SDK
 
 ---
@@ -187,7 +196,14 @@ uv run streamlit run frontend/app.py
 4. Click **Generate SDK**
 5. Use the generated code
 
-👉 That’s your WOW moment.
+👉 This delivers instant developer productivity.
+
+---
+
+## ⚠️ Note
+
+This system extracts structured representations from documentation using AI.
+While highly accurate, results may include inferred endpoints for improved usability.
 
 ---
 
