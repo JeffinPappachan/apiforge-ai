@@ -37,7 +37,8 @@ def extract_params(params: List) -> List[str]:
     return result
 
 
-def generate_python_sdk(api: Dict) -> str:
+# ✅ IMPORTANT: FUNCTION NAME FIXED
+def generate_sdk(api: Dict) -> str:
     """
     Generate a clean Python SDK from API structure
     """
