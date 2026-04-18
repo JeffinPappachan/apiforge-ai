@@ -4,30 +4,48 @@
 
 APIForge AI is an AI-powered developer tool that converts any API documentation URL into:
 
-* ✅ Structured API metadata
-* 🔐 Authentication detection
-* 📡 Extracted endpoints with parameters
-* 🧠 AI-powered understanding of API structure
-* 🧾 Auto-generated Python SDK (ready to use)
+- ✅ Structured API metadata
+- 🔐 Authentication detection
+- 📡 Extracted endpoints with parameters
+- 🧠 AI-powered understanding of API structure
+- 🧾 Auto-generated Python SDK (ready to use)
 
 ---
 
 ## 🌐 Live Demo
 
-* **Frontend:** https://apiforge-ai.streamlit.app
-* **Backend:** https://apiforge-ai-1.onrender.com
+- **Frontend:** https://apiforge-ai.streamlit.app
+- **Backend:** https://apiforge-ai-1.onrender.com
 
 👉 Paste any API documentation URL and generate SDK instantly.
 
 ---
 
+## Screenshots
+
+### 🔹 API Analysis
+
+![Analysis](assets/UI.png)
+
+### 🔹 SDK Generation
+
+![SDK](assets/UI01.png)
+
+### 🔹 Another View
+
+![View](assets/UI02.png)
+
+### 🔹 Backend Running Sucessfully
+
+![View](assets/UI03.png)
+
 ## 🎯 Problem
 
 Developers spend significant time:
 
-* Reading API documentation
-* Understanding endpoints and parameters
-* Writing boilerplate integration code
+- Reading API documentation
+- Understanding endpoints and parameters
+- Writing boilerplate integration code
 
 👉 APIForge AI reduces this effort from **hours to seconds**.
 
@@ -46,12 +64,12 @@ Provide an API documentation URL → APIForge AI will:
 
 ## 🧠 Tech Stack
 
-* **Backend:** FastAPI
-* **Frontend:** Streamlit
-* **LLM:** Groq (`llama-3.1-8b-instant`)
-* **Scraping:** `requests` + `BeautifulSoup`
-* **Parsing:** Regex + structured normalization
-* **Package Manager:** uv
+- **Backend:** FastAPI
+- **Frontend:** Streamlit
+- **LLM:** Groq (`llama-3.1-8b-instant`)
+- **Scraping:** `requests` + `BeautifulSoup`
+- **Parsing:** Regex + structured normalization
+- **Package Manager:** uv
 
 ---
 
@@ -115,9 +133,9 @@ python -m streamlit run frontend/app.py
 
 ## 🧪 Sample Inputs
 
-* https://jsonplaceholder.typicode.com/
-* https://openweathermap.org/api
-* https://reqres.in/
+- https://jsonplaceholder.typicode.com/
+- https://openweathermap.org/api
+- https://reqres.in/
 
 ---
 
@@ -179,12 +197,12 @@ python -m streamlit run frontend/app.py
 
 ## 🔥 Key Features
 
-* 🚀 One-click API understanding
-* 🧠 LLM-powered structured extraction
-* 🔐 Authentication detection
-* 📡 Hybrid parsing (LLM + fallback)
-* ⚡ Fast processing
-* 🧾 Auto-generated SDK
+- 🚀 One-click API understanding
+- 🧠 LLM-powered structured extraction
+- 🔐 Authentication detection
+- 📡 Hybrid parsing (LLM + fallback)
+- ⚡ Fast processing
+- 🧾 Auto-generated SDK
 
 ---
 
@@ -206,6 +224,10 @@ This system extracts structured representations from documentation using AI.
 While highly accurate, results may include inferred endpoints for improved usability.
 
 ---
+
+## 🚀 Impact
+
+Reduces API integration time from hours to seconds, enabling developers to focus on building features instead of boilerplate code.
 
 ## 👨‍💻 Author
 
